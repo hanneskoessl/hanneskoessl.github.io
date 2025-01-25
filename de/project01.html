@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Master's thesis</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+
+            <!-- Intro -->
+            <div id="intro">
+                <h1>Hannes Kößl</h1>
+                <p>Physiker mit Kenntnissen in Python, C/C++ und SQL.</p>
+                <ul class="actions">
+                    <li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                </ul>
+            </div>	
+			
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html#nav">Projekte</a></li>
+                    <li><a href="blog.html#nav">Blog</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/hannes-kößl-800537264" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/hanneskoessl" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#nav">DE</a></li>
+                    <li><a href="../en/project01.html#nav">EN</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div id="main">
+                <article class="post">
+                    <header class="major">
+                        <h2>Auswertung von Messdaten eines Teilchenbeschleunigers</h2>
+                    </header>
+                    <div class="image main"><img src="images/fit-result.png" alt="" /></div>
+                    <h3>1. Einleitung</h3>
+                    <p>
+                        In diesem Beitrag möchte ich einen Einblick in meine Masterarbeit geben, die ich am Institut für Hochenergiephysik der Österreichischen Akademie der Wissenschaften absolviert habe.
+                        Neben meinen Ergebnissen möchte ich auch auf Methoden und Tools eingehen, die ich verwendet habe.
+                    </p>
+
+                    <h3>2. Zusammenfassung</h3>
+                    <p>
+                        Das Standardmodell der Teilchenphysik beschreibt die schwache, elektromagnetische und starke Wechselwirkung zwischen den Elementarteilchen.
+                        Im Standardmodell wird die Häufigkeit von Übergängen zwischen den drei Flavour-Generationen der Quarks bei einer Wechselwirkung mit einem W-Boson
+                        durch die Cabibbo-Kobayashi-Maskawa-Matrix (CKM-Matrix) angegeben. Diese Matrix ist essenziell, um die CP-Verletzung zu verstehen.
+                    </p>
+                    <p>
+                        Ziel meiner Arbeit war es, das Matrixelement |V<sub>cb</sub>| zu bestimmen, ein Schlüsselparameter der CKM-Matrix, der experimentell ermittelt werden muss.
+                        Hierbei habe ich den exklusiven semileptonischen Zerfall B<sup>0</sup> &rarr; D*<sup>&minus;</sup>&ell;<sup>+</sup>&nu;<sub>&ell;</sub> untersucht und Daten vom Belle-Experiment analysiert.
+                        Zur Analyse habe ich die CLN-Parametrisierung (Caprini-Lellouch-Neubert-Parametrisierung) verwendet, ein mathematisches Modell zur Beschreibung von semileptonischen Zerfällen schwerer Mesonen.
+                    </p>
+
+                    <h3>3. Methoden und Tools</h3>
+                    <p>
+                        Für die Analyse habe ich verschiedene Tools und Frameworks eingesetzt:
+                    </p>
+                    <ul>
+                        <li><strong>Python</strong>: Hauptprogrammiersprache für Datenaufbereitung, Analyse und Visualisierung.</li>
+                        <li><strong>NumPy</strong>: Für die Implementation von Funktionen, die den Teilchenverfall modellieren.</li>
+                        <li><strong>SciPy</strong>: Zur numerischen Berechnung von Integralen.</li>
+                        <li><strong>Matplotlib</strong>: Für die Erstellung von Visualisierungen und Diagrammen, um die Ergebnisse darzustellen.</li>
+                    </ul>
+
+                    <h3>4. Ergebnisse und Erkenntnisse</h3>
+                    <p>
+                        Die Ergebnisse meiner Analyse haben gezeigt, dass die Fit-Parameter der CLN-Parametrisierung stabil sind, selbst unter verschiedenen Annahmen und Bedingungen.
+                        Die folgenden Parameter wurden bestimmt:
+                    </p>
+                    <ul>
+                        <li>&rho;<sup>2</sup> = 1.166 &plusmn; 0.034</li>
+                        <li>R<sub>1</sub>(1) = 1.184 &plusmn; 0.028</li>
+                        <li>R<sub>2</sub>(1) = 0.848 &plusmn; 0.022</li>
+                        <li>F(1)|V<sub>cb</sub>|&eta;<sub>EW</sub> = (36.49 &plusmn; 0.46) &times; 10<sup>&minus;3</sup></li>
+                    </ul>
+                    <p>
+                        Diese Ergebnisse tragen dazu bei, bestehende Abweichungen zwischen verschiedenen Messmethoden besser zu verstehen und die CKM-Matrix präziser zu modellieren.
+                    </p>
+                    <p>
+                        DOI: <a href="https://doi.org/10.34726/hss.2023.97022">10.34726/hss.2023.97022</a>
+                    </p>
+                </article>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <section class="split contact">
+                    <section>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@untitled.tld">hanneskoessl12@gmail.com</a></p>
+                    </section>
+                    <section>
+                        <h3>Social</h3>
+                        <ul class="icons alt">
+                            <li><a href="https://www.linkedin.com/in/hannes-kößl-800537264" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/hanneskoessl" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </section>
+                </section>
+            </footer>
+
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul><li>&copy; Hannes Kößl</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>

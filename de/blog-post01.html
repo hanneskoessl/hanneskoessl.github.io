@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>1. Blogeintrag</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+
+            <!-- Intro -->
+            <div id="intro">
+                <h1>Hannes Kößl</h1>
+                <p>Physiker mit Kenntnissen in Python, C/C++ und SQL.</p>
+                <ul class="actions">
+                    <li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                </ul>
+            </div>	
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html#nav">Projekte</a></li>
+                    <li><a href="blog.html#nav">Blog</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/hannes-kößl-800537264" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/hanneskoessl" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#nav">DE</a></li>
+                    <li><a href="../en/blog-post01.html#nav">EN</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div id="main">
+                <article class="post">
+                    <header class="major">
+                        <span class="date">2025-01-24</span>
+                        <h2>Big O-Notation</h2>
+                    </header>
+                    <p>
+                        Wird verwendet, um Algorithmen zu vergleichen.  
+                        Verglichen wird die Zeit- und Speicherkomplexität,  
+                        also die Anzahl an benötigten Rechenoperationen und den benötigten Speicherplatz.
+                    </p>
+                    <p>
+                        Python-Beispiele für unterschiedliche Zeitkomplexität:
+                    </p>
+                    <p>
+                        <strong>O(n)</strong>
+                    </p>
+                    <pre>
+            <code>def print_items(n):
+    for i in range(n):
+        print(i)
+
+print_items(10)
+            </code>
+                    </pre>
+                    <p>
+                        <strong>Konstanten fallen weg</strong><br>
+                        O(2n) → O(n)
+                    </p>
+                    <pre>
+            <code>def print_items(n):
+    for i in range(n):
+        print(i)
+
+    for i in range(n):
+        print(i)
+
+print_items(10)
+            </code>
+                    </pre>
+                    <p>
+                        <strong>O(n<sup>2</sup>)</strong>
+                    </p>
+                    <pre>
+            <code>def print_items(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j)
+
+print_items(10)
+            </code>
+                    </pre>
+                    <p>
+                        <strong>Nicht-dominante Terme weglassen</strong><br>
+                        O(n<sup>2</sup>+n) → O(n<sup>2</sup>)
+                    </p>
+                    <pre>
+            <code>def print_items(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j)
+
+    for i in range(n):
+        print(i)
+
+print_items(10)
+            </code>
+                    </pre>
+                    <p>
+                        <strong>O(1)</strong>
+                    </p>
+                    <pre>
+            <code>def add_items(n):
+    return n + n
+
+print(add_items(10))
+            </code>
+                    </pre>
+                    <p>
+                        <strong>O(log n)</strong><br>
+                        Ein Beispiel dafür wäre binäre Suche. Bei jedem Schritt wird der Suchbereich halbiert.
+                    </p>
+                    <p>
+                        <strong>Eingabe von unterschiedlichen Termen</strong><br>
+                        O(a+b)
+                    </p>
+                    <pre>
+            <code>def print_items(a, b):
+    for i in range(a):
+        print(i)
+    
+    for j in range(b):
+        print(j)
+
+print_items(3, 5)
+            </code>
+                    </pre>
+                    <p>
+                        <strong>Listen</strong><br>
+                        <code>my_list.append(15)</code>, <code>my_list.pop()</code> haben eine Zeitkomplexität von <strong>O(1)</strong>.  
+                        <code>my_list.insert(5, 14)</code> hat eine Zeitkomplexität von <strong>O(n)</strong>.
+                    </p>
+                </article>
+            </div>
+            
+
+            <!-- Footer -->
+            <footer id="footer">
+                <section class="split contact">
+                    <section>
+                        <h3>Email</h3>
+                        <p><a href="#">hanneskoessl12@gmail.com</a></p>
+                    </section>
+                    <section>
+                        <h3>Social</h3>
+                        <ul class="icons alt">
+                            <li><a href="https://www.linkedin.com/in/hannes-kößl-800537264" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://github.com/hanneskoessl" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </section>
+                </section>
+            </footer>
+            
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul><li>&copy; Hannes Kößl</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>
