@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>2nd blog post</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+
+            <!-- Intro -->
+            <div id="intro">
+                <h1>Hannes Kößl</h1>
+                <p>Physicist with knowledge of Python, C/C++ and SQL.</p>
+                <ul class="actions">
+                    <li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                </ul>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html#nav">Projekte</a></li>
+                    <li><a href="blog.html#nav">Blog</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/hannes-kößl-800537264" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/hanneskoessl" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="../de/blog-post02.html#nav">DE</a></li>
+                    <li><a href="#nav">EN</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div id="main">
+                <article class="post">
+                    <header class="major">
+                        <span class="date">2025-02-20</span>
+                        <h2>Streamlit in Docker</h2>
+                    </header>
+                
+                    <p>
+                        How can you run a Streamlit app inside a Docker container?  
+                        Let's explore this in this blog post.
+                    </p>
+                
+                    <p>
+                        Streamlit is a <b>Python framework</b> that allows you to quickly and easily create interactive web apps.  
+                        It is particularly useful for <b>data visualization</b>.  
+                        Streamlit can be used with many well-known Python libraries such as <b>Pandas, NumPy and Matplotlib</b>.
+                    </p>
+                
+                    <p>
+                        To ensure a Streamlit app runs quickly and reliably, <b>Docker</b> is a great choice.  
+                        Docker creates a container that includes all necessary dependencies, making the app run seamlessly, regardless of the system environment.
+                    </p>
+                
+                    <hr>
+                
+                    <h3>Streamlit App: ISS Tracker</h3>
+                
+                    <p>
+                        For this blog post, I created an ISS tracking app using Streamlit that displays the current position of the International Space Station (ISS).  
+                        The ISS coordinates are retrieved from the API <a href="http://api.open-notify.org/iss-now.json">http://api.open-notify.org/iss-now.json</a>.  
+                        To visualize the ISS position on a world map, I use <b>Plotly</b>.
+                    </p>
+                
+                    <p>Here is a preview of the app:</p>
+                
+                    <p align="center">
+                        <img src="https://github.com/hanneskoessl/iss-tracker/blob/main/img/screenshot.png?raw=true" alt="ISS Tracker Screenshot">
+                    </p>
+                
+                    <p>
+                        The full source code for this app is available on <a href="https://github.com/hanneskoessl/iss-tracker">GitHub</a>.  
+                    </p>
+                
+                    <hr>
+                
+                    <h3>Dockerfile</h3>
+                
+                    <p>
+                        The <b>Dockerfile</b> contains all the commands needed to build a Docker image for the app:
+                    </p>
+                
+<pre><code>FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+EXPOSE 8501
+CMD ["streamlit", "run", "./src/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+</code></pre>
+                
+                    <hr>
+                
+                    <h3>Docker Compose</h3>
+                
+                    <p>
+                        <b>Docker Compose</b> simplifies running the app by managing all required services.  
+                        To allow modifications to the code while the app is running, a <b>volume</b> must be mounted.  
+                        This ensures that any changes made locally are automatically reflected in the Docker container.
+                    </p>
+                
+<pre><code>version: '3.8'
+                
+services:
+streamlit_app:
+    build: .
+    container_name: iss-tracker
+    ports:
+    - "8501:8501"
+    volumes:
+    - ./src:/app/src
+</code></pre>
+                
+                    <hr>
+                
+                    <h3>requirements.txt</h3>
+                
+                    <p>
+                        The <b>requirements.txt</b> file lists all dependencies needed for the app.  
+                        These are installed automatically when the Docker image is built.
+                    </p>
+                
+<pre><code>streamlit==1.42.0
+plotly==6.0.0
+requests==2.32.3
+</code></pre>
+                
+                    <hr>
+                
+                    <h3>config.toml</h3>
+                
+                    <p>
+                        The <b>config.toml</b> file contains configuration settings for Streamlit.  
+                        To ensure the app automatically updates during runtime, the following settings should be applied:
+                    </p>
+<pre><code>[server]
+headless = true
+runOnSave = true
+fileWatcherType = "poll"
+</code></pre>
+                    <hr>
+                
+                    <h3>Using the App</h3>
+                
+                    <p>
+                        To use the app, <a href='https://www.docker.com/products/docker-desktop/'>Docker Desktop</a> must be installed. After that, the following commands need to be executed in the terminal:
+                    </p>
+                
+                <pre>
+<code>
+git clone https://github.com/hanneskoessl/iss-tracker.git   
+cd iss-tracker
+docker-compose up -d --build        # Starts the application
+
+# The app can be accessed in the web browser at http://localhost:8501.
+docker-compose stop                 # Stops the application
+docker-compose down --rmi all       # Removes all containers and images created for this app.
+</code>
+                </pre>
+                
+                    <h3>5. Additional Resources</h3>
+                    <ul>
+                        <li>GitHub repository with the full source code: <a href="https://github.com/hanneskoessl/iss-tracker">https://github.com/hanneskoessl/iss-tracker</a>.</li>
+                        <li>Docker Desktop: <a href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a></li>
+                    </ul>
+                
+                </article>
+                
+                
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <section class="split contact">
+                    <section>
+                        <h3>Email</h3>
+                        <p><a href="#">hanneskoessl12@gmail.com</a></p>
+                    </section>
+                    <section>
+                        <h3>Social</h3>
+                        <ul class="icons alt">
+                            <li><a href="https://www.linkedin.com/in/hannes-kößl-800537264" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            <li><a href="https://github.com/hanneskoessl" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </section>
+                </section>
+            </footer>
+            
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul><li>&copy; Hannes Kößl</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>
