@@ -53,20 +53,17 @@
                     <p>
                         <strong>O(n)</strong>
                     </p>
-                    <pre>
-            <code>def print_items(n):
+<pre><code>def print_items(n):
     for i in range(n):
         print(i)
 
 print_items(10)
-            </code>
-                    </pre>
+</code></pre>
                     <p>
                         <strong>Konstanten fallen weg</strong><br>
                         O(2n) → O(n)
                     </p>
-                    <pre>
-            <code>def print_items(n):
+<pre><code>def print_items(n):
     for i in range(n):
         print(i)
 
@@ -74,26 +71,22 @@ print_items(10)
         print(i)
 
 print_items(10)
-            </code>
-                    </pre>
+</code></pre>
                     <p>
                         <strong>O(n<sup>2</sup>)</strong>
                     </p>
-                    <pre>
-            <code>def print_items(n):
+<pre><code>def print_items(n):
     for i in range(n):
         for j in range(n):
             print(i, j)
 
 print_items(10)
-            </code>
-                    </pre>
+</code></pre>
                     <p>
                         <strong>Nicht-dominante Terme weglassen</strong><br>
                         O(n<sup>2</sup>+n) → O(n<sup>2</sup>)
                     </p>
-                    <pre>
-            <code>def print_items(n):
+<pre><code>def print_items(n):
     for i in range(n):
         for j in range(n):
             print(i, j)
@@ -102,18 +95,15 @@ print_items(10)
         print(i)
 
 print_items(10)
-            </code>
-                    </pre>
+</code></pre>
                     <p>
                         <strong>O(1)</strong>
                     </p>
-                    <pre>
-            <code>def add_items(n):
+<pre><code>def add_items(n):
     return n + n
 
 print(add_items(10))
-            </code>
-                    </pre>
+</code></pre>
                     <p>
                         <strong>O(log n)</strong><br>
                         Ein Beispiel dafür wäre binäre Suche. Bei jedem Schritt wird der Suchbereich halbiert.
@@ -122,8 +112,7 @@ print(add_items(10))
                         <strong>Eingabe von unterschiedlichen Termen</strong><br>
                         O(a+b)
                     </p>
-                    <pre>
-            <code>def print_items(a, b):
+<pre><code>def print_items(a, b):
     for i in range(a):
         print(i)
     
@@ -131,8 +120,7 @@ print(add_items(10))
         print(j)
 
 print_items(3, 5)
-            </code>
-                    </pre>
+</code></pre>
                     <p>
                         <strong>Listen</strong><br>
                         <code>my_list.append(15)</code>, <code>my_list.pop()</code> haben eine Zeitkomplexität von <strong>O(1)</strong>.  
