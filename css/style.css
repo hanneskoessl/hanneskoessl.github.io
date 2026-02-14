@@ -1,0 +1,235 @@
+html {
+    font-size: 30px;
+}
+
+body {
+    background-color: #2f3e46;
+    color: white;
+    margin: 0;
+}
+
+#intro {
+    margin: 4rem 0;
+}
+
+#intro h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 4rem 0 1rem 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+#intro p {
+    text-align: center;
+    font-size: 0.7rem;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 0 4rem 0;
+}
+
+.navbar {
+    background-color: #354f52;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15%;
+    border: #2f3e46 solid thin;
+    box-sizing: border-box;
+    border-bottom: none;   
+}
+
+.navbar a {
+    display: block;
+    padding: 0.6rem 0.9rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.navbar a:hover {
+    background-color: #84a98c;
+    
+}
+
+.navbar .active a {
+    background-color: white;
+    color: black;
+}
+
+.navbar ol{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;    
+}
+
+.posts article {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    font-size: 0.7rem;  
+    width: 35%;
+    margin: 0;
+    border: #2f3e46 solid thin;
+    box-sizing: border-box;
+    padding: 1.rem;
+}
+
+.posts article.post-featured {
+    width: 70%;
+    padding: 0 1.5rem;
+    border-top: none;
+}
+
+.posts h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.posts article h2 a{
+    font-size: 0.8rem;
+    text-align: center;
+    color: black;
+    text-decoration: none;   
+}
+
+.posts article h2 a:hover {
+    color: #52796f;
+}
+
+.posts article.post-featured h2 {
+    margin: 2rem;
+}
+
+.posts article.post-featured h2 a{
+    font-size: 1.5rem;
+}
+
+.posts img {
+    display: block;
+    width: 90%;
+    margin: 0 auto 1rem auto;
+}
+
+.posts p {
+    margin: 0 0 1rem 0;
+}
+
+.posts article p {
+    font-size: 0.7rem;
+    padding: 0 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-stretch: 100%;
+    line-height: 2;
+}
+
+.posts form {
+    text-align: center;
+    padding: 0 0 1rem 0;
+}
+
+.posts button {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    background-color: white;
+    border: 0.05rem solid black;
+    color: black;
+    font-style: up;
+}
+
+.posts button:hover {
+    color: #84a98c;
+    border: 0.05rem solid #84a98c;
+}
+
+footer {
+    margin: 3rem 15% 1rem 15%;
+}
+
+footer section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e0e1dd;
+    border: thin solid black;
+    color: black;
+}
+
+footer section h3{
+    margin: 1.15rem 0;
+    font-size: 0.7rem;
+    width: 4rem;
+    padding: 0 0 0 1rem;
+}
+
+footer section p {
+    font-size: 0.7rem;
+    margin: 1.15rem 0;
+    color: gray;
+}
+
+footer section p a{
+    text-decoration: none;
+    color: gray;    
+}
+
+footer section p a:hover{
+    color: #18bfef;
+}
+
+footer section ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.7rem;
+    padding: 0;
+}
+
+footer section ul li {
+    display: block;
+    margin: 0 0.5rem 0 0;
+}
+
+.footer-icons li a {
+    border: none;
+    width: 0.7rem;
+    height: 0.7rem;
+    color: gray;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+.footer-icons li a:hover {
+    color: black;
+}
+
+.footer-icons li a i {
+    margin: 0 0.2rem 0 0;
+}
+
+#copyright {
+    margin: 1rem 15%;
+    font-size: 0.7rem;
+}
+
+#copyright ul {
+    display: flex;
+}
+
+#copyright ul li {
+    display: block;
+}
