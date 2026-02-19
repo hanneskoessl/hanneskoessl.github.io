@@ -5,4 +5,3 @@ Personal portfolio website showcasing projects, blog posts, and technical intere
 ## Live Website
 
 👉 *[hanneskoessl.github.io](hanneskoessl.github.io)*
-
