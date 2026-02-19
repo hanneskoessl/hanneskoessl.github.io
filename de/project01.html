@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Master's thesis</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="intro">
+        <h1>Hannes Kößl</h1>
+        <p>Physiker mit Kenntnissen in Python, C/C++ und SQL.</p>
+    </div>
+
+    <nav id="navbar">
+        <ol class="nav-links">
+            <li class="active">
+                <a href="index.html#navbar">Projekte</a>
+            </li>
+            <li>
+                <a href="blog.html#navbar">Blog</a>
+            </li>
+        </ol>
+        <ol class="nav-icons">
+            <li>
+                <a href="#navbar">DE</a>
+            </li>
+            <li>
+                <a href="../en/project01.html#navbar">EN</a>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="main">
+        <div class="posts">
+            <article class="post-featured">
+
+                <h2>Auswertung von Messdaten eines Beschleunigers</h2>
+
+                <div class="image main"><img src="images/fit-result.png" alt="" /></div>
+                <h3>1. Einleitung</h3>
+                <p>
+                    In diesem Beitrag möchte ich einen Einblick in meine Masterarbeit geben, die ich am Institut für
+                    Hochenergiephysik der Österreichischen Akademie der Wissenschaften absolviert habe.
+                    Neben meinen Ergebnissen möchte ich auch auf Methoden und Tools eingehen, die ich verwendet habe.
+                </p>
+
+                <h3>2. Zusammenfassung</h3>
+                <p>
+                    Das Standardmodell der Teilchenphysik beschreibt die schwache, elektromagnetische und starke
+                    Wechselwirkung zwischen den Elementarteilchen.
+                    Im Standardmodell wird die Häufigkeit von Übergängen zwischen den drei Flavour-Generationen der
+                    Quarks bei einer Wechselwirkung mit einem W-Boson
+                    durch die Cabibbo-Kobayashi-Maskawa-Matrix (CKM-Matrix) angegeben. Diese Matrix ist essenziell, um
+                    die CP-Verletzung zu verstehen.
+                </p>
+                <p>
+                    Ziel meiner Arbeit war es, das Matrixelement |V<sub>cb</sub>| zu bestimmen, ein Schlüsselparameter
+                    der CKM-Matrix, der experimentell ermittelt werden muss.
+                    Hierbei habe ich den exklusiven semileptonischen Zerfall B<sup>0</sup> &rarr;
+                    D*<sup>&minus;</sup>&ell;<sup>+</sup>&nu;<sub>&ell;</sub> untersucht und Daten vom Belle-Experiment
+                    analysiert.
+                    Zur Analyse habe ich die CLN-Parametrisierung (Caprini-Lellouch-Neubert-Parametrisierung) verwendet,
+                    ein mathematisches Modell zur Beschreibung von semileptonischen Zerfällen schwerer Mesonen.
+                </p>
+
+                <h3>3. Methoden und Tools</h3>
+                <p>
+                    Für die Analyse habe ich verschiedene Tools und Frameworks eingesetzt:
+                </p>
+                <ul>
+                    <li><strong>Python</strong>: Hauptprogrammiersprache für Datenaufbereitung, Analyse und
+                        Visualisierung.</li>
+                    <li><strong>NumPy</strong>: Für die Implementation von Funktionen, die den Teilchenverfall
+                        modellieren.</li>
+                    <li><strong>SciPy</strong>: Zur numerischen Berechnung von Integralen.</li>
+                    <li><strong>Matplotlib</strong>: Für die Erstellung von Visualisierungen und Diagrammen, um die
+                        Ergebnisse darzustellen.</li>
+                </ul>
+
+                <h3>4. Ergebnisse und Erkenntnisse</h3>
+                <p>
+                    Die Ergebnisse meiner Analyse haben gezeigt, dass die Fit-Parameter der CLN-Parametrisierung stabil
+                    sind, selbst unter verschiedenen Annahmen und Bedingungen.
+                    Die folgenden Parameter wurden bestimmt:
+                </p>
+                <ul>
+                    <li>&rho;<sup>2</sup> = 1.166 &plusmn; 0.034</li>
+                    <li>R<sub>1</sub>(1) = 1.184 &plusmn; 0.028</li>
+                    <li>R<sub>2</sub>(1) = 0.848 &plusmn; 0.022</li>
+                    <li>F(1)|V<sub>cb</sub>|&eta;<sub>EW</sub> = (36.49 &plusmn; 0.46) &times; 10<sup>&minus;3</sup>
+                    </li>
+                </ul>
+                <p>
+                    Diese Ergebnisse tragen dazu bei, bestehende Abweichungen zwischen verschiedenen Messmethoden besser
+                    zu verstehen und die CKM-Matrix präziser zu modellieren.
+                </p>
+                <h3>5. Weiterführende Links</h3>
+                <ul>
+                    <li>Die vollständige Dokumentation meiner Masterarbeit: <a
+                            href="https://doi.org/10.34726/hss.2023.97022">10.34726/hss.2023.97022</a>.</li>
+                    <li>Weitere Informationen in meiner Projektarbeit: <a href="project02.html#navbar">Physikalische
+                            Analyse der Daten des Belle-Experimentes</a>.</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <section>
+            <h3>Ort</h3>
+            <p>
+                Wien, Österreich</p>
+        </section>
+        <section>
+            <h3>Email</h3>
+            <p><a href="mailto:hanneskoessl12@gmail.com">hanneskoessl12@gmail.com</a></p>
+        </section>
+        <section>
+            <h3>Social</h3>
+            <ul class="footer-icons">
+                <li>
+                    <a href="https://www.linkedin.com/in/hannes-kößl-800537264" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa fa-linkedin-square"></i>LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/hanneskoessl" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-github-square"></i>GitHub
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+    </footer>
+
+    <div id="copyright">
+        <ul>
+            <li>&copy; Hannes Kößl</li>
+            <li><a href="impressum.html#navbar">Impressum</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

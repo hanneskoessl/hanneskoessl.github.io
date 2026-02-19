@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Project thesis</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+</head>
+
+<body>
+    <div id="intro">
+        <h1>Hannes Kößl</h1>
+        <p>Physicist with knowledge of Python, C/C++ and SQL.</p>
+    </div>
+
+    <nav id="navbar">
+        <ol class="nav-links">
+            <li class="active">
+                <a href="index.html#navbar">Projekte</a>
+            </li>
+            <li>
+                <a href="blog.html#navbar">Blog</a>
+            </li>
+        </ol>
+        <ol class="nav-icons">
+            <li>
+                <a href="../de/project03.html#navbar">DE</a>
+            </li>
+            <li>
+                <a href="#navbar">EN</a>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="main">
+        <div class="posts">
+            <article class="post-featured">
+                <header class="major">
+                    <h2>Simulation of Particle Overlap</h2>
+                </header>
+
+                <h3>1. Introduction</h3>
+                <p>
+                    In my first project, I studied mathematical criteria for the overlap of superellipses.
+                    These criteria are required for Monte Carlo simulations in statistical physics to avoid particle
+                    overlaps.
+                </p>
+                <p>
+                    For spherical particles, calculating overlap is relatively simple. However, for elliptical and
+                    superelliptical particles, their orientation must also be considered.
+                    To determine the overlap of elliptical particles, the Vielliard-Baron criterion can be used.
+                    In this project, the focus was on superellipses, which are parameterized by the following equation:
+                </p>
+                <p style="text-align: center; font-style: italic;">
+                    \( \left| \frac{x}{a} \right| ^z + \left| \frac{y}{a} \right| ^z = 1 \)
+                </p>
+                <p>
+                    Here, \(z\) is a rational number. In this project, the specific case \(z = 4\) was examined, and a
+                    numerical criterion for overlap
+                    was implemented.
+                </p>
+
+                <h3>2. Methods and Tools</h3>
+                <p>
+                    The following tools were used to implement the project:
+                </p>
+                <ul>
+                    <li><strong>Mathematica</strong>: For the symbolic derivation and simplification of the overlap
+                        criterion.</li>
+                    <li><strong>Fortran</strong>: For the efficient implementation of the overlap criterion.</li>
+                </ul>
+
+                <h3>3. Implementation and Results</h3>
+                <p>
+                    The approach to determining overlap is based on calculating the so-called Sylvester matrix and its
+                    resultant.
+                    The equations of two superellipses are used to form a Sylvester matrix. The resultant of the matrix
+                    becomes zero
+                    if the underlying equations of the superellipses share common roots, indicating an overlap of the
+                    superellipses.
+                </p>
+                <p>
+                    To check for overlap, the Sylvester matrix must be numerically evaluated for different positions. In
+                    cases where the resultant changes its sign,
+                    an overlap is present.
+                </p>
+            </article>
+        </div>
+
+    </div>
+
+    <footer>
+        <section>
+            <h3>Location</h3>
+            <p>Vienna, Austria</p>
+        </section>
+        <section>
+            <h3>Email</h3>
+            <p><a href="mailto:hanneskoessl12@gmail.com">hanneskoessl12@gmail.com</a></p>
+        </section>
+        <section>
+            <h3>Social</h3>
+            <ul class="footer-icons">
+                <li>
+                    <a href="https://www.linkedin.com/in/hannes-kößl-800537264" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa fa-linkedin-square"></i>LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/hanneskoessl" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-github-square"></i>GitHub
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+    </footer>
+
+    <div id="copyright">
+        <ul>
+            <li>&copy; Hannes Kößl</li>
+            <li><a href="impressum.html#navbar">Imprint</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

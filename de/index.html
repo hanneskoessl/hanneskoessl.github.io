@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hannes Kößl Portfolio</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,21 +15,21 @@
         <p>Physiker mit Kenntnissen in Python, C/C++ und SQL.</p>
     </div>
 
-    <nav class="navbar">
+    <nav id="navbar">
         <ol class="nav-links">
             <li class="active">
-                <a href="index.html#nav">Projekte</a>
+                <a href="index.html#navbar">Projekte</a>
             </li>
             <li>
-                <a href="blog.html#nav">Blog</a>
+                <a href="blog.html#navbar">Blog</a>
             </li>
         </ol>
         <ol class="nav-icons">
             <li>
-                <a href="#nav">DE</a>
+                <a href="#navbar">DE</a>
             </li>
             <li>
-                <a href="../en/index.html#nav">EN</a>
+                <a href="../en/index.html#navbar">EN</a>
             </li>
         </ol>
     </nav>
@@ -40,11 +39,11 @@
             <article class="post-featured">
 
                 <h2>
-                    <a href="project01.html#nav">Auswertung von Messdaten eines Beschleunigers</a>
+                    <a href="project01.html#navbar">Auswertung von Messdaten eines Beschleunigers</a>
                 </h2>
 
 
-                <a href="project01.html#nav" class="image main"><img src="../images/fit-result.png" alt="" /></a>
+                <a href="project01.html#navbar" class="image main"><img src="../images/fit-result.png" alt="" /></a>
 
                 <p>
                     <strong>Masterarbeit:</strong> In meiner Masterarbeit habe ich mich mit der
@@ -61,9 +60,9 @@
                 </p>
 
 
-                <form action="project01.html#nav">
-                    <button> Projekt ansehen</button>
-                </form>
+                <a href="project01.html#navbar" class="button">
+                    Projekt ansehen
+                </a>
             </article>
 
 
@@ -72,10 +71,11 @@
                 <article>
                     <header>
 
-                        <h2><a href="project02.html#nav">Physikalische Analyse der Daten des<br />
+                        <h2><a href="project02.html#navbar">Physikalische Analyse der Daten des<br />
                                 Belle-Experimentes</a></h2>
                     </header>
-                    <a href="project02.html#nav" class="image fit"><img src="../images/cm_deltaE_s_bg.png" alt="" /></a>
+                    <a href="project02.html#navbar" class="image fit"><img src="../images/cm_deltaE_s_bg.png"
+                            alt="" /></a>
                     <p>
                         <strong>Projektarbeit:</strong> In diesem Projekt habe ich Datensätze des internationalen
                         Belle-Experiments analysiert, das von 1999 bis 2010 in Japan durchgeführt wurde.
@@ -86,17 +86,18 @@
                     <p>
                         <strong>Verwendete Tools:</strong> C++, CERN ROOT
                     </p>
-                    <form action="project21.html#nav">
-                        <button> Projekt ansehen</button>
-                    </form>
+                    <a href="project02.html#navbar" class="button">
+                        Projekt ansehen
+                    </a>
                 </article>
 
                 <article>
                     <header>
-                        <h2><a href="project03.html#nav">Simulation von<br />
+                        <h2><a href="project03.html#navbar">Simulation von<br />
                                 Teilchenüberlappung</a></h2>
                     </header>
-                    <a href="project03.html#nav" class="image fit"><img src="../images/superellipse.png" alt="" /></a>
+                    <a href="project03.html#navbar" class="image fit"><img src="../images/superellipse.png"
+                            alt="" /></a>
                     <p>
                         <strong>Projektarbeit:</strong> In diesem Projekt habe ich Kriterien für die Überlappung von
                         superelliptischen Teilchen entwickelt, die für Monte-Carlo-Simulationen wichtig sind.
@@ -108,18 +109,18 @@
                     <p>
                         <strong>Verwendete Tools:</strong> Mathematica, Fortran
                     </p>
-                    <form action="project03.html#nav">
-                        <button> Projekt ansehen</button>
-                    </form>
+                    <a href="project03.html#navbar" class="button">
+                        Projekt ansehen
+                    </a>
                 </article>
 
                 <article>
                     <header>
-                        <h2><a href="project04.html#nav">Simulation von Lichtsteuerung<br />
+                        <h2><a href="project04.html#navbar">Simulation von Lichtsteuerung<br />
                                 durch zwei dielektrische Partikel<br />
                                 in der Nähe eines Wellenleiters</a></h2>
                     </header>
-                    <a href="project04.html#nav" class="image fit"><img src="../images/k_48_195df.png" alt="" /></a>
+                    <a href="project04.html#navbar" class="image fit"><img src="../images/k_48_195df.png" alt="" /></a>
                     <p>
                         <strong>Bachelorarbeit:</strong> In meiner Bachelorarbeit habe ich untersucht, wie die
                         Ausbreitung von Licht in einem optischen Wellenleiter durch die Platzierung von Nanopartikeln
@@ -131,16 +132,16 @@
                     <p>
                         <strong>Verwendete Tools:</strong> Python, Pandas, Netgen/NGSolve
                     </p>
-                    <form action="project04.html#nav">
-                        <button> Projekt ansehen</button>
-                    </form>
+                    <p>
+                        <a href="project04.html#navbar" class="button">
+                            Projekt ansehen
+                        </a>
+                    </p>
                 </article>
         </div>
-
         </section>
 
         <footer>
-
             <section>
                 <h3>Ort</h3>
                 <p>
@@ -174,6 +175,7 @@
         <div id="copyright">
             <ul>
                 <li>&copy; Hannes Kößl</li>
+                <li><a href="impressum.html#navbar">Impressum</a></li>
             </ul>
         </div>
 

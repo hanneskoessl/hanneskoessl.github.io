@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>1. Blogeintrag</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div id="intro">
+        <h1>Hannes Kößl</h1>
+        <p>Physiker mit Kenntnissen in Python, C/C++ und SQL.</p>
+    </div>
+
+    <nav id="navbar">
+        <ol class="nav-links">
+            <li>
+                <a href="index.html#navbar">Projekte</a>
+            </li>
+            <li class="active">
+                <a href="blog.html#navbar">Blog</a>
+            </li>
+        </ol>
+        <ol class="nav-icons">
+            <li>
+                <a href="#navbar">DE</a>
+            </li>
+            <li>
+                <a href="../en/blog-post01.html#navbar">EN</a>
+            </li>
+        </ol>
+    </nav>
+
+    <div id="main">
+        <div class="posts">
+            <article class="post-featured">
+                <span class="date">2025-01-24</span>
+                <h2>Big O-Notation</h2>
+                <p>
+                    Wird verwendet, um Algorithmen zu vergleichen.
+                    Verglichen wird die Zeit- und Speicherkomplexität,
+                    also die Anzahl an benötigten Rechenoperationen und den benötigten Speicherplatz.
+                </p>
+                <p>
+                    Python-Beispiele für unterschiedliche Zeitkomplexität:
+                </p>
+
+                <h3>O(n)</h3>
+
+                <pre><code>def print_items(n):
+    for i in range(n):
+        print(i)
+
+print_items(10)
+</code></pre>
+
+                <h3>Konstanten fallen weg</h3>
+                <p>O(2n) → O(n)</p>
+                </p>
+                <pre><code>def print_items(n):
+    for i in range(n):
+        print(i)
+
+    for i in range(n):
+        print(i)
+
+print_items(10)
+</code></pre>
+
+                <h3>O(n<sup>2</sup>)</h3>
+
+                <pre><code>def print_items(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j)
+
+print_items(10)
+</code></pre>
+
+                <h3>Nicht-dominante Terme weglassen</h3>
+                <p>O(n<sup>2</sup>+n) → O(n<sup>2</sup>)</p>
+                </p>
+                <pre><code>def print_items(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j)
+
+    for i in range(n):
+        print(i)
+
+print_items(10)
+</code></pre>
+                <h3>O(1)</h3>
+                <pre><code>def add_items(n):
+    return n + n
+
+print(add_items(10))
+</code></pre>
+
+                <h3>O(log n)</h3>
+                <p>
+                    Ein Beispiel dafür wäre binäre Suche. Bei jedem Schritt wird der Suchbereich halbiert.
+                </p>
+
+                <h3>Eingabe von unterschiedlichen Termen</h3>
+                <p>O(a+b)</p>
+                <pre><code>def print_items(a, b):
+    for i in range(a):
+        print(i)
+    
+    for j in range(b):
+        print(j)
+
+print_items(3, 5)
+</code></pre>
+                <h3>Listen</h3>
+                <p>
+                    <code>my_list.append(15)</code>, <code>my_list.pop()</code> haben eine Zeitkomplexität von
+                    <strong>O(1)</strong>.
+                    <code>my_list.insert(5, 14)</code> hat eine Zeitkomplexität von <strong>O(n)</strong>.
+                </p>
+            </article>
+        </div>
+    </div>
+
+
+    <footer>
+        <section>
+            <h3>Ort</h3>
+            <p>
+                Wien, Österreich</p>
+        </section>
+        <section>
+            <h3>Email</h3>
+            <p><a href="mailto:hanneskoessl12@gmail.com">hanneskoessl12@gmail.com</a></p>
+        </section>
+        <section>
+            <h3>Social</h3>
+            <ul class="footer-icons">
+                <li>
+                    <a href="https://www.linkedin.com/in/hannes-kößl-800537264" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa fa-linkedin-square"></i>LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/hanneskoessl" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-github-square"></i>GitHub
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+    </footer>
+
+    <div id="copyright">
+        <ul>
+            <li>&copy; Hannes Kößl</li>
+            <li><a href="impressum.html#navbar">Impressum</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

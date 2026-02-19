@@ -41,7 +41,7 @@ body {
     margin: 0 0 8rem 0;
 }
 
-.navbar {
+#navbar {
     background-color: var(--bg-secondary);
     display: flex;
     justify-content: space-between;
@@ -49,11 +49,11 @@ body {
     
     border: var(--bg-main) solid thin;
     
-    border-top: none;
+    /* border-top: none; */
     border-bottom: none;
 }
 
-.navbar a {
+#navbar a {
     
     display: block;
     padding: 1.2rem 1.8rem;
@@ -63,23 +63,23 @@ body {
     font-family: Arial, Helvetica, sans-serif; 
 }
 
-.navbar a:hover {
+#navbar a:hover {
     background-color: var(--accent);    
 }
 
-.navbar .active a {
+#navbar .active a {
     background-color: var(--text-light);
     color: var(--text-dark);
     border: none;
 }
 
-.navbar ol{
+#navbar ol{
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-.navbar li{
+#navbar li{
     list-style: none;
 }
 
@@ -90,7 +90,7 @@ body {
 }
 
 .posts article {
-    /* display: block; */
+    display: block;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--text-light);
     color: var(--text-dark);
@@ -111,6 +111,11 @@ body {
     margin: 2rem 0;
 }
 
+.posts h3 {
+    
+    text-transform: uppercase;
+    margin: 2rem 2rem 1rem 2rem;
+}
 
 
 .posts article h2 a{
@@ -125,7 +130,7 @@ body {
 }
 
 .posts article.post-featured h2 {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .posts article.post-featured h2 a{
@@ -149,20 +154,38 @@ body {
     line-height: 2;
 }
 
+.posts article ul {
+    padding: 0 0 0 4rem;
+}
+
+.posts article .date {
+    display: block;
+    text-align: center;
+    padding: 1rem 0 0 0;
+}
+
 .posts form {
     text-align: center;
     padding: 0 0 2rem 0;
 }
 
-.posts button {
+.posts .button {
+    display: block;
+    justify-self: center;
     font-size: 1.4rem;
     padding: 0.6rem 0.6rem;
     background-color: var(--text-light);
     border: 0.1rem solid var(--text-dark);
     color: var(--text-dark);
+    text-decoration: none;
+    margin: 0 0 1rem 0;
+    text-align: center;
+
 }
 
-.posts button:hover {
+
+
+.posts .button:hover {
     color: var(--accent);
     border: 0.1rem solid var(--accent);
 }
@@ -247,15 +270,60 @@ footer section ul li {
 
 #copyright ul li {
     display: block;
+    padding: 0 1rem;
 } 
+
+#copyright ul li a{
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+#copyright ul li a:hover{
+    color: var(--accent)
+}
+
+.post-links {
+    padding: 1rem;
+    margin: 0;
+    border: thin solid var(--text-dark);
+    border-top: none;
+    background-color: var(--text-light);
+}
+
+.post-links li {
+    display: block;
+    padding: 0.3rem;
+    width: 100%; 
+}
+
+.post-links li a{
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 1.3rem;
+}
+
+.post-links li a:hover{
+    color: var(--accent);
+}
+
+
+pre code{
+    display: block;
+    overflow-x: auto;
+    margin: 0 2rem; 
+    white-space: pre;  
+}
+
+code {
+    font-family: "Courier New", monospace;
+    border: solid #dcdcdcbf; 
+    background-color: #dcdcdc40;
+    padding: 0.2rem;
+    white-space: nowrap;
+}
 
 
 @media screen and (max-width: 800px) {
-
-    body {
-        background-color: red;
-        
-    }
 
     .posts article {
         width: 100%;
@@ -266,7 +334,6 @@ footer section ul li {
 @media screen and (max-width: 480px) {
 
     body {
-        background-color: orange;
         padding-inline: 0;
     }
 }
